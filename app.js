@@ -79,7 +79,7 @@ let ironManDeux = {
   color: 'Red & Gold',
   hasShots: true,
   hasRabies: false,
-  friends: [gopher]
+  friends: [gopher] // reference or pointing 
 }
 
 console.log('what is a cat', ironMan)
@@ -88,3 +88,93 @@ console.log('what is a cat', ironMan)
 gopher.friends.push(ironMan)
 
 let jermsCats = [gopher, ironMan, ironManDeux]
+
+
+
+
+// Build an app
+
+let secretCode = ['🦒', '😼', '🥝']
+let userInput = []
+
+
+
+function catClick() {
+  console.log('you clicked the 😼')
+  userInput.push('😼')
+  validateUserInput()
+  // terminology
+  // function declaration or definition 
+  // function execution or invocation 
+}
+
+function dinoClick() {
+  console.log('you clicked el 🦖!')
+  userInput.push('🦖')
+  validateUserInput()
+}
+
+function validateUserInput() {
+  if (userInput.length === 3) {
+    if (userInput[0] == secretCode[0]
+      && userInput[1] == secretCode[1]
+      && userInput[2] == secretCode[2]) {
+      youWin()
+    } else {
+      youLost()
+    }
+  }
+}
+
+function octoClick() {
+  console.log('you clicked 🐙')
+  userInput.push('🐙')
+  validateUserInput()
+}
+function kiwiClick() {
+  userInput.push('🥝')
+  console.log('you clicked 🥝')
+  validateUserInput()
+}
+function otterClick() {
+  userInput.push('🦦')
+  console.log('you clicked 🦦')
+  validateUserInput()
+}
+function geraldClick() {
+  userInput.push('🦒')
+  console.log('you clicked 🦒')
+  validateUserInput()
+}
+function randomAnimalClick() {
+  userInput.push('🎱')
+  console.log('you clicked 🎱')
+  validateUserInput()
+}
+
+function youLost() {
+  window.close()
+}
+
+function youWin() {
+  // @ts-ignore
+  window.location = 'https://www.youtube.com/watch?v=dQw4w9WgXcQ'
+}
+
+
+
+// calling the function aka(invocation)
+
+// create a variable
+
+// OTHER ODD WAYS TO CREATE FUNCTIONS
+// let jimmy = function james() {
+
+// } // longhand
+
+// jimmy = 7
+
+// console.log(jimmy)
+
+// let bob = () => {} // shorthand some sneaky stuff about it scope
+
